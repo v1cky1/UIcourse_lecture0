@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta charset="utf-8">
+	<style>
+	label,input{display:block;}input{margin-bottom:25px;}label{margin-bottom:10px;} .inline input, label {display: inline;} .btns input{display: inline;}
+	 .btns{margin:20px 0 0 10px;} form{width: 50%; margin:0 auto;}
+	</style>
+</head>
+<body>
+<form name="test" method="GET" action="#" data-attr="hhh" autocomplete="on">
+	<fieldset>
+		<legend>Person</legend>
+		<label for="name">Name	</label>
+		<input type="text" id="name" name="name" placeholder="Petro" autofocus>
+
+		<label for="email">Email	</label>
+		<input type="text" name="Email" id="email" placeholder="petro@gmail.com">
+
+		<label for="password">Password	</label>
+		<input type="password" id="password" name="Password" placeholder="password" required autocomplete="off">
+
+		<label for="age">Age	</label>
+		<input type="number" name="Age(datalist)"  min="18" max="150" step="1" >
+		
+		<!-- <label for="age">Age	</label>
+		<input type="text" name="age" id="age" list="number">
+			<datalist id="number">
+			<option value="18"></option>
+			<option value="19"></option>
+			<option value="20"></option>
+		</datalist> -->
+
+		<label for="birthdate">Date of Birth</label>
+		<input type="date" id="birhdate" name="birthdate" min="1901-01-01" max="2014-04-04">
+
+<!-- 		<label for="time">Time</label>
+		<input type="time" id="time" name="time" step="any">
+
+
+		<label for="birthdate">Datetime-local of Birth</label>
+		<input type="datetime-local" id="birhdate" name="birthdate"> -->
+
+		<!-- <label for="birthdate">Month of Birth</label>
+		<input type="month" id="birhdate" name="birthdate">
+
+		<label for="week">Week</label>
+		<input type="week" id="week" name="week"> -->
+
+
+		<label for="tel">Tel	</label>
+		<input type="tel" id="tel" name="tel" >
+
+		<label for="zip">ZIP</label>
+		<input id="zip" name="zip" pattern="[\d]{5}(-[\d]{4})">
+
+		<label for="file">Photo</label>
+		<input type="file" multiple id="file" name="file">
+
+		<label for="fv-color">FvColor</label>
+		<input type="color" id="fvcolor" name="fvcolor">
+	</fieldset>
+
+	<fieldset class="inline">
+		<legend>Choose Number</legend>
+		<label for="2013">2013</label>
+		<input type="radio" name="2013" id="2013"> 
+		<label for="2014">2014</label>
+		<input type="radio" name="2014" id="2014" checked="checked">
+		<label for="2015">2015</label>
+		<input type="checkbox" name="2015" id="2015" value="2015">
+		<label for="2016">2016</label>
+		<input type="checkbox" name="2016" id="2016" value="2016">
+	</fieldset>
+
+	<fieldset><legend>Select</legend>
+		<select>
+		<option value="one" data-value="one">Option1</option>
+		<option value="two" data-value="two">Option2</option>
+		<option value="three" data-value="three">Option3</option>
+		<option value="four" data-value="four">Option4</option>
+		</select>
+	</fieldset>
+
+	<fieldset><legend>URL</legend>
+		<label for="website">Website	</label>
+		<input type="url" id="website" name="website" nonvalidate>
+
+		<label for="amount">Amount	</label>
+		<input type="range" id="amount" name="amount" ><!--Safari&Opera-->
+
+		<label for="rating">Rating	</label>
+		<input type="range" name="rating" min="1" max="10"> <!--Safari&Opera-->
+			<style>
+				input[type=range]::before {content: attr(min);}
+				input[type=range]::after {content: attr(max);}
+			</style>
+
+		<label for="search">Search	</label>
+		<input type="search" id="search" name="search" results="n"><br> 
+		<!-- input[type="search"] {-webkit-appearance: textfield;} -->
+	</fieldset>
+<div class="btns">
+<input type="reset" value="RESET">
+<input type="submit" value="SUBMIT">
+<input type="button" value="Button">
+</div>
+
+</form>
+</body>
+</html>
